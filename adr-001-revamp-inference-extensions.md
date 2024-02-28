@@ -19,7 +19,7 @@ The current approach to different inference providers are shown with the 3 exten
 
 Main technical concerns:
 
-- The way these inference extensions are coded are defying the way how most of the extension framwork, or, as in Jan framework case, work.
+- The way these inference extensions are coded are defying the way how most of the extension framework, or, as in Jan framework case, work.
   - Extension of how it was abtrated in Jan framework is a standalone application
   - Extension should handle more cases due to above nature rather than solve single use-case
   - Extension itself can be reused and add more functionalities (add more providers of inference, re-solve both local and remote cases)
