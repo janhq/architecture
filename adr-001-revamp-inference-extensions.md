@@ -48,6 +48,8 @@ Propsed change:
 - Some popular provider can be subsequently inherit or extends to support `OpenAI compatible` that has similiar interface.
 - Development effort will be focused on how to deliver your provider, which is around the logic of inferencing that the developer implementing it already quite familiar.
 
+Overall idea: Moving from high requirements, high freedom -> Structured, easier to implement 
+
 ## Decision
 
 TBD
