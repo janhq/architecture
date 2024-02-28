@@ -10,6 +10,8 @@ TBD
 
 ## Context
 
+### Status Quo
+
 The current approach to different inference providers are shown with the 3 extensions below
 - https://github.com/janhq/jan/tree/dev/extensions/inference-nitro-extension
 - https://github.com/janhq/jan/blob/dev/extensions/inference-openai-extension
@@ -28,6 +30,10 @@ Main SDK/devrel concerns:
 - We must have different layers of contributing.
   - For example if you are coming from Deepinfra and want to connect Jan to the Deepinfre. You only need to write or add a simple adapter or config to main inference extension, not rewrite the entire extension which is in itself a standalone app
   - Should cater for developer audience: Core/App contributor, Third-party provider (eg above), Inference engine provider. The current approach is, everyone is an extension developer.
+
+### Consideration
+
+![Proposed Change](img/inference-provider.png)
 
 ## Decision
 
