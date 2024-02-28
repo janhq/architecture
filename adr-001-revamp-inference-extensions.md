@@ -35,6 +35,19 @@ Main SDK/devrel concerns:
 
 ![Proposed Change](img/inference-provider.png)
 
+What was changed?
+
+Current state:
+- A provider needs to read through the entire JanSDK (supposedly it is in existence) documentation and understand all the onLoad(),... internal logic of Jan to be able to add a mere provider that most of the time is either OpenAI compatible,....
+- A provider needs to maintain their own inference logic without any help from the official framework asides from the internal logic (which if you are a third party provider you might not care about).
+- A provider is not guided to any particular interface or coding style that is compatible or suitable for how Jan operate, but mostly decide on their own.
+
+Propsed change:
+- Introduce `providerBase` as a base class and subsequent base classes for `localProviderBase` and `remoteProviderBase` to give some guidance over how you can implement a provider.
+- All the internal logics can be centralized and handled by one single extension `InferenceProviderExtension`, cut down requirements (as in current state above) to add a new provider.
+- Some popular provider can be subsequently inherit or extends to support `OpenAI compatible` that has similiar interface.
+- Development effort will be focused on how to deliver your provider, which is around the logic of inferencing that the developer implementing it already quite familiar.
+
 ## Decision
 
 TBD
